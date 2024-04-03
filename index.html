@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Kalkulator BMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Kalkulator BMI - Muhammad Ramli</h1>
+    </header>
+    <main>
+        <div class="main-container">
+            
+            <section class="form">
+                <h2>Formulir BMI</h2>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI berikut</p>
+                <section class="container-form">
+                    <option value=""></option>
+                    <div>
+                        <label>Jenis Kelamin</label>
+                        <div>
+                            <input type="radio" id="sex1" name="sex" value="Laki-laki">
+                            <label for="sex1">Laki-laki</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sex2" name="sex" value="Perempuan">
+                            <label for="sex2">Perempuan</label>
+                        </div>                        
+                    </div>
+                    <div>
+                        <label>Berat Badan (Kg)</label><br/>
+                        <input type="number" class="form-item" id="weight-input">
+                    </div>
+                    <div>
+                        <label>Usia (Tahun)</label><br/>
+                        <input type="number" class="form-item" id="age-input">
+                    </div>
+                    <div>
+                        <label>Tinggi badan (Cm)</label><br/>
+                        <input type="number" class="form-item" id="height-input">
+                    </div>
+                    <div>
+                        <button type="button" id="calculate-button" onclick="calculate()">Hitung BMI</button>
+                        <button type="button" id="reset-button" onclick="reload()">Reset</button>
+                        </div>
+                </section>
+                <p>Keunggulan fitur :<br/>
+                1. Menghitung berat badan <br/>
+                2. Menentukan kategori berat badan ideal atau tidak <br/>
+                3. Mempersiapkan program penurunan berat badan <br/>
+
+                </p>
+
+            </section>
+        
+            <section class="result">
+                <h2>Hasil</h2>
+                <section class="container-result">
+                    <h4>Berat Badan Lebih</h4>
+                    <h1 id="result-bmi">0</h1>
+                    <h4 id="status-bmi">Anda Memiliki Berat Badan Berlebih</h4>
+                    <button><a onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html">Download Hasil BMI</a></button>
+                </section>
+            </section>
+        
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
